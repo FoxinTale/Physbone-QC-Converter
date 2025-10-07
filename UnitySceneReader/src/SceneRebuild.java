@@ -30,6 +30,8 @@ public class SceneRebuild {
 
         Main.mainScene = buildHierarchy(Main.transforms, Main.gameObjects);
         attachPhysBonesToNodes(Main.physbones, Main.mainScene);
+        // With a GUI, we will pause here. We will display the entire root scene to the user and have them select (single option only) which object we're parsing.
+        // As some people (me included) have their Quest and PC version in the scene file.
         ExtractPhysbones.buildPhysBoneChains(Main.physbones, Main.mainScene);
     }
 
@@ -91,7 +93,6 @@ public class SceneRebuild {
         return new Hierarchy(roots, nodeByTransformId, byGameObjectID);
     }
 
-    // Assumes: Node.getPhysbones() returns a non-null list (init it in Node ctor).
     static void attachPhysBonesToNodes(ArrayList<PhysBone> physbones, Hierarchy h) {
         if (physbones == null || physbones.isEmpty()) return;
 

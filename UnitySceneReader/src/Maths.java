@@ -14,6 +14,10 @@ public class Maths {
         return Math.sqrt(xValue + yValue + zValue);
     }
 
+    public static double scaledDistance(double distance){
+        return distance * scaleValue;
+    }
+
     static String formatDoubleToString(double value) {
         if (!Double.isFinite(value)) return "—";
         return DIST_FMT.format(value);

@@ -59,6 +59,10 @@ public class TransformProcessor {
                     gameObjectId = arrayStringToLong(transformArray[j]);
                 }
 
+                if(transformArray[j].contains("m_LocalRotation")){
+
+                }
+
                 if(transformArray[j].contains("m_LocalPosition")){
                     posX = Float.parseFloat(transformArray[j].substring(transformArray[j].lastIndexOf(':') + 1).trim());
                     posY = Float.parseFloat(transformArray[j + 1].substring(transformArray[j + 1].indexOf(':') + 1).trim());

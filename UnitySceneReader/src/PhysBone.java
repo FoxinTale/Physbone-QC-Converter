@@ -61,7 +61,7 @@ public class PhysBone {
     public PhysBone(long id, long objectID, long rootTransform, float pull, Curve pullCurve, float spring, Curve springCurve,
                     float stiffness, Curve stiffnessCurve, float gravity, Curve gravityCurve, float gravityFalloff,
                     Curve gravityFalloffCurve, float immobile, Curve immobileCurve, int limitType, float maxAngleX,
-                    Curve maxAngleXCurve,float maxAngleZ, Curve maxAngleZCurve,
+                    Curve maxAngleXCurve, float maxAngleZ, Curve maxAngleZCurve,
                     float rotLimitX, Curve rotLimitXCurve, float rotLimitY, Curve rotLimitYCurve, float rotLimitZ, Curve rotLimitZCurve) {
         this.id = id;
         this.objectID = objectID;

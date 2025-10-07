@@ -37,7 +37,7 @@ public class Main {
             x Match them all together.
             x And reconstruct the scene itself.
 
-       x Do the maths to calculate the distance.
+         Do the maths to calculate the distance.
             x Get the physbones from the scene.
             x Determine their root bone.
             x Find the bone chain that these are all on.
@@ -47,6 +47,18 @@ public class Main {
 
         Generate the QC file.
             - Have the user point it towards the working folder for the GMod addon.
+            - Have the user point it towards the MDL file we want to use as the body.
             - Search for files ending in .dmx.
-            
+            - Once DMX files are found, allow the user to choose the bodygroup option for each file (except the body).
+            - Prompt the user if we're doing this for a male, or female model. This determines how we handle it.
+            - Ask if we want to make a playermodel.
+            - Ask if we want to also make an NPC.
+
+
+        As for the GUI itself:
+            Load it from the start. We'll have a file chooser shortly after greeting the user.
+            After selecting a unity scene file, we'll have some sort of progress indicator, as not everyone may have a strong PC.
+            Once parsing is complete, we'll display a checkbox list, prompting the user to select the root avatar object.
+            Once the user confirms this, we'll then calculate the distances.
+
  */
